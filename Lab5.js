@@ -32,7 +32,6 @@ const Lab5 = (app) => {
     todo.completed = req.body.completed;
     res.sendStatus(200);
   });
-
   app.post("/a5/todos", (req, res) => {
     const newTodo = {
       ...req.body,
