@@ -14,10 +14,7 @@ try {
   await mongoose.connect(process.env.MONGODB_URI);
   console.log("Connected to MongoDB");
   const app = express();
-  app.use(cors({
-    credentials: true,
-    origin: process.env.FRONTEND_URL
-  }));
+  app.use(cors());
   const sessionOptions = {
     secret: process.env.SESSION_SECRET,
     resave: false,
